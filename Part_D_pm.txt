@@ -1,0 +1,67 @@
+PART D — AI-AUGMENTED TASK
+
+1.  Prompt Given to AI
+
+“Explain regression vs classification and bias-variance tradeoff with
+Python examples and visualizations.”
+
+------------------------------------------------------------------------
+
+2.  AI Response (Documented Output)
+
+Regression: Regression predicts continuous values such as prices or
+temperatures.
+
+Code: import numpy as np import matplotlib.pyplot as plt
+
+X = np.linspace(0, 10, 50) y = 2 * X + 3 + np.random.randn(50)
+
+coeffs = np.polyfit(X, y, 1) y_pred = np.polyval(coeffs, X)
+
+plt.scatter(X, y) plt.plot(X, y_pred) plt.show()
+
+Output: Scatter plot with best-fit line
+
+Explanation: The line represents predicted continuous values.
+
+------------------------------------------------------------------------
+
+Classification: Classification predicts discrete categories such as 0 or
+1.
+
+Code: X = np.linspace(0, 10, 50) y = np.where(X > 5, 1, 0)
+
+plt.scatter(X, y) plt.show()
+
+Output: Two distinct classes (0 and 1)
+
+Explanation: Data is divided into categories using a threshold.
+
+------------------------------------------------------------------------
+
+Bias–Variance Tradeoff:
+
+Code: X = np.linspace(0, 10, 30) y = np.sin(X) + np.random.randn(30)*0.3
+
+y1 = np.polyval(np.polyfit(X, y, 1), X) y5 = np.polyval(np.polyfit(X, y,
+5), X)
+
+plt.scatter(X, y) plt.plot(X, y1) plt.plot(X, y5) plt.show()
+
+Output: Visualization showing underfitting and overfitting
+
+Explanation: Degree 1 model underfits, degree 5 model overfits the data.
+
+------------------------------------------------------------------------
+
+3.  Evaluation
+
+Are explanations correct? Yes, regression, classification, and
+bias-variance concepts are correctly explained.
+
+Do visualizations correctly show underfitting and overfitting? Yes, the
+plots clearly demonstrate underfitting (simple model) and overfitting
+(complex model).
+
+Conclusion: The explanations are accurate, and the code is correct,
+efficient, and runnable.

@@ -1,0 +1,52 @@
+PART C — INTERVIEW READY
+
+Q1 — Difference between Regression and Classification
+
+Regression: - Predicts continuous values - Output is numeric
+
+Examples: - House price prediction - Temperature prediction - Stock
+price prediction
+
+Classification: - Predicts discrete categories - Output is labels (0/1)
+
+Examples: - Spam vs Not Spam - Disease detection - Fraud detection
+
+Explanation: Regression is used when the output is continuous, while
+classification is used when the output is categorical.
+
+------------------------------------------------------------------------
+
+Q2 — Coding: calculate_mse(y_true, y_pred)
+
+Code: import numpy as np
+
+def calculate_mse(y_true, y_pred): return np.mean((y_true - y_pred) **
+2)
+
+y_true = np.array([10, 20, 30]) y_pred = np.array([12, 18, 33])
+
+print(calculate_mse(y_true, y_pred))
+
+Output: 4.666666666666667
+
+Explanation: MSE calculates the average squared difference between
+actual and predicted values.
+
+------------------------------------------------------------------------
+
+Q3 — Bias–Variance Tradeoff
+
+Bias: Bias is error due to a simple model that cannot capture patterns.
+Leads to underfitting.
+
+Variance: Variance is error due to a complex model that captures noise.
+Leads to overfitting.
+
+Underfitting: - Model is too simple - High bias, low variance - Poor
+performance
+
+Overfitting: - Model is too complex - Low bias, high variance - Good
+training but poor testing performance
+
+Conclusion: The best model balances bias and variance for optimal
+performance.

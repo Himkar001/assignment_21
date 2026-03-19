@@ -1,0 +1,63 @@
+PART B — STRETCH PROBLEM
+
+1.  Simulate Bias–Variance Tradeoff
+
+Code: import numpy as np import matplotlib.pyplot as plt
+
+np.random.seed(0) X = np.linspace(0, 10, 30) y = np.sin(X) +
+np.random.randn(30) * 0.3
+
+def fit_model(degree): coeffs = np.polyfit(X, y, degree) y_pred =
+np.polyval(coeffs, X) return y_pred
+
+y_pred_1 = fit_model(1) y_pred_2 = fit_model(2) y_pred_5 = fit_model(5)
+
+Output: Models of different complexity generated (degree 1, 2, 5)
+
+Explanation: Different polynomial degrees represent different model
+complexities.
+
+------------------------------------------------------------------------
+
+Visualization:
+
+Code: plt.scatter(X, y) plt.plot(X, y_pred_1, label=“Degree 1”)
+plt.plot(X, y_pred_2, label=“Degree 2”) plt.plot(X, y_pred_5,
+label=“Degree 5”) plt.legend() plt.show()
+
+Output: Graph showing underfitting, good fit, and overfitting
+
+Explanation: Degree 1 underfits, degree 2 fits well, degree 5 overfits
+noise.
+
+------------------------------------------------------------------------
+
+2.  Training Error vs Model Complexity
+
+Code: degrees = [1, 2, 3, 4, 5] errors = []
+
+for d in degrees: coeffs = np.polyfit(X, y, d) y_pred =
+np.polyval(coeffs, X) mse = np.mean((y - y_pred) ** 2)
+errors.append(mse)
+
+print(errors)
+
+Output: Error values decreasing with complexity
+
+Explanation: Training error decreases as model complexity increases.
+
+------------------------------------------------------------------------
+
+3.  Explanation
+
+Bias: Bias is error due to overly simple models that fail to capture
+patterns. High bias leads to underfitting.
+
+Variance: Variance is error due to overly complex models that capture
+noise. High variance leads to overfitting.
+
+Optimal Model: The best model lies between underfitting and overfitting,
+where both bias and variance are balanced.
+
+Conclusion: A moderate complexity model (degree 2 or 3) is usually
+optimal.

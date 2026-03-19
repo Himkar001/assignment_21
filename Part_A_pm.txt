@@ -1,0 +1,85 @@
+PART A — CONCEPT APPLICATION
+
+1.  Create Synthetic Dataset
+
+Code: import numpy as np import matplotlib.pyplot as plt
+
+np.random.seed(0) X_reg = np.linspace(0, 10, 50) y_reg = 2 * X_reg + 3 +
+np.random.randn(50)
+
+X_clf = np.linspace(0, 10, 50) y_clf = np.where(X_clf > 5, 1, 0)
+
+Output: Regression data: continuous values Classification data: binary
+values (0 and 1)
+
+Explanation: Regression dataset has continuous target values, while
+classification dataset has binary labels.
+
+------------------------------------------------------------------------
+
+2.  Train Model and Visualization
+
+Regression:
+
+Code: coeffs = np.polyfit(X_reg, y_reg, 1) y_pred = np.polyval(coeffs,
+X_reg)
+
+Output: Best fit line approximated
+
+Explanation: The model finds a line that best fits the data points.
+
+Classification:
+
+Code: threshold = 5 y_pred_clf = np.where(X_clf > threshold, 1, 0)
+
+Output: Binary predictions (0 or 1)
+
+Explanation: Values are classified based on threshold.
+
+------------------------------------------------------------------------
+
+3.  Identify Problem Type
+
+Example: y = [10.5, 20.3, 15.2] → Regression y = [0, 1, 1, 0] →
+Classification
+
+Explanation: Continuous values indicate regression, while discrete
+categories indicate classification.
+
+------------------------------------------------------------------------
+
+4.  Manual Regression Model
+
+Code: m = 2 c = 3 y_pred_manual = m * X_reg + c
+
+mse = np.mean((y_reg - y_pred_manual) ** 2) print(mse)
+
+Output: MSE value (varies depending on data)
+
+Explanation: MSE measures error between actual and predicted values.
+
+------------------------------------------------------------------------
+
+5.  Simple Classification Logic
+
+Code: threshold = 5 y_pred = np.where(X_clf > threshold, 1, 0)
+
+accuracy = np.mean(y_pred == y_clf) print(accuracy)
+
+Output: 1.0
+
+Explanation: Accuracy is the ratio of correct predictions to total
+predictions.
+
+------------------------------------------------------------------------
+
+6.  Regression vs Classification
+
+Regression: - Output: Continuous values - Example: Price prediction -
+Metrics: MSE, RMSE
+
+Classification: - Output: Discrete classes - Example: Spam detection -
+Metrics: Accuracy, Precision
+
+Explanation: Regression predicts numeric values, while classification
+predicts categories.

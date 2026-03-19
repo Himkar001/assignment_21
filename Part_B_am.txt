@@ -1,0 +1,55 @@
+PART B — STRETCH PROBLEM
+
+1.  Matrix Operations using NumPy
+
+Code: import numpy as np
+
+A = np.array([[1, 2], [3, 4]])
+
+B = np.array([[5, 6], [7, 8]])
+
+print(np.dot(A, B)) print(A.T) print(np.linalg.det(A))
+
+Output: [[19 22] [43 50]]
+
+[[1 3] [2 4]]
+
+-2.0
+
+Explanation: np.dot performs matrix multiplication, .T gives transpose,
+and np.linalg.det computes determinant.
+
+------------------------------------------------------------------------
+
+2.  Solving Linear Equations
+
+Code: A = np.array([[2, 1], [1, 3]])
+
+B = np.array([5, 6])
+
+solution = np.linalg.solve(A, B) print(solution)
+
+Output: [1.8 1.4]
+
+Explanation: The system is solved using AX = B format where NumPy
+directly computes the solution.
+
+------------------------------------------------------------------------
+
+3.  Performance Comparison
+
+Code: import time import numpy as np
+
+arr = np.random.rand(1000000)
+
+start = time.time() total = 0 for i in arr: total += i end = time.time()
+print(“Loop time:”, end - start)
+
+start = time.time() total_np = np.sum(arr) end = time.time()
+print(“NumPy time:”, end - start)
+
+Output (example): Loop time: 0.25 seconds NumPy time: 0.003 seconds
+
+Explanation: Python loops are slower because they process elements one
+by one, while NumPy uses optimized vectorized operations in C, making it
+significantly faster.

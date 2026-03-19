@@ -1,0 +1,66 @@
+PART D — AI-AUGMENTED TASK
+
+1.  Prompt Given to AI
+
+“Explain NumPy broadcasting and vectorisation with practical Python
+examples.”
+
+------------------------------------------------------------------------
+
+2.  AI Response (Documented Output)
+
+Broadcasting Explanation: NumPy broadcasting allows operations between
+arrays of different shapes by automatically expanding the smaller array
+to match the larger one.
+
+Code: import numpy as np
+
+A = np.array([[1, 2, 3], [4, 5, 6]])
+
+B = np.array([10, 20, 30])
+
+result = A + B print(result)
+
+Output: [[11 22 33] [14 25 36]]
+
+Explanation: The 1D array B is automatically expanded across rows of A.
+No loops are required.
+
+------------------------------------------------------------------------
+
+Vectorisation Explanation: Vectorisation means performing operations on
+entire arrays at once instead of using loops.
+
+Code: import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+
+result = arr ** 2 print(result)
+
+Output: [ 1 4 9 16]
+
+------------------------------------------------------------------------
+
+Comparison with Loop:
+
+Code: result = [] for i in arr: result.append(i**2)
+
+print(result)
+
+Output: [1, 4, 9, 16]
+
+Explanation: Vectorised operations are faster and more efficient than
+loops.
+
+------------------------------------------------------------------------
+
+3.  Evaluation
+
+Are examples correct? Yes, the examples correctly demonstrate
+broadcasting and vectorisation concepts.
+
+Is code efficient and runnable? Yes, the code is efficient because it
+uses NumPy built-in functions and avoids unnecessary loops.
+
+Conclusion: The explanation is accurate, and the code is optimized,
+readable, and suitable for practical use.

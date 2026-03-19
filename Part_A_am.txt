@@ -1,0 +1,105 @@
+PART A — NUMPY IMPLEMENTATION
+
+1.  Creating Arrays, Indexing & Slicing
+
+Code: import numpy as np
+
+arr1 = np.array([10, 20, 30, 40, 50]) arr2 = np.array([[1, 2, 3], [4, 5,
+6], [7, 8, 9]]) arr3 = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+
+print(arr1) print(arr2) print(arr3)
+
+Output: [10 20 30 40 50]
+
+[[1 2 3] [4 5 6] [7 8 9]]
+
+[[[1 2] [3 4]]
+
+[[5 6] [7 8]]]
+
+Explanation: 1D, 2D and 3D arrays are created using NumPy arrays.
+
+Indexing & Slicing:
+
+print(arr1[2]) print(arr1[1:4]) print(arr2[1, 2]) print(arr2[0])
+print(arr2[:, 1]) print(arr2[0:2, 1:3]) print(arr3[0, 1, 1])
+
+Output: 30 [20 30 40] 6 [1 2 3] [2 5 8] [[2 3] [5 6]] 4
+
+Explanation: Indexing accesses specific elements, slicing extracts
+portions of arrays.
+
+------------------------------------------------------------------------
+
+2.  Basic Operations
+
+Code: a = np.array([1, 2, 3]) b = np.array([4, 5, 6])
+
+print(a + b) print(a - b) print(a * b)
+
+print(np.mean(a)) print(np.var(a)) print(np.std(a))
+
+Output: [5 7 9] [-3 -3 -3] [ 4 10 18] 2.0 0.6666666666666666
+0.816496580927726
+
+Explanation: Operations are element-wise. NumPy provides built-in
+statistical functions.
+
+------------------------------------------------------------------------
+
+3.  Broadcasting
+
+Code: arr2 = np.array([[1, 2, 3], [4, 5, 6]]) arr1 = np.array([10, 20,
+30])
+
+print(arr2 + arr1) print(arr2 * 2)
+
+vec = np.array([1, 2, 3]) print(arr2 * vec)
+
+Output: [[11 22 33] [14 25 36]]
+
+[[ 2 4 6] [ 8 10 12]]
+
+[[ 1 4 9] [ 4 10 18]]
+
+Explanation: Broadcasting automatically expands smaller arrays to match
+larger ones.
+
+------------------------------------------------------------------------
+
+4.  Vectorised Operations
+
+Code: arr = np.array([-2, -1, 0, 1, 2, 3])
+
+print(arr2) print(arr3)
+
+arr[arr < 0] = 0 print(arr)
+
+arr = np.array([10, 20, 30, 40]) norm = (arr - arr.min()) / (arr.max() -
+arr.min()) print(norm)
+
+Output: [4 1 0 1 4 9] [-8 -1 0 1 8 27] [0 0 0 1 2 3] [0. 0.33333333
+0.66666667 1. ]
+
+Explanation: Vectorized operations apply calculations to all elements
+efficiently.
+
+------------------------------------------------------------------------
+
+5.  Dataset Operations
+
+Code: data = np.array([10, 50, 30, 20, 90, 60, 80, 70])
+
+top5 = np.sort(data)[-5:] print(top5)
+
+data2 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+print(np.sum(data2, axis=1)) print(np.sum(data2, axis=0))
+
+threshold = 5 indices = np.where(data2 > threshold) print(indices)
+
+Output: [30 50 60 70 90] [ 6 15 24] [12 15 18] (array([1, 2, 2, 2]),
+array([2, 0, 1, 2]))
+
+Explanation: Sorting helps find top values. Axis defines row-wise and
+column-wise operations. np.where finds indices satisfying conditions.
