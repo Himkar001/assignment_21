@@ -17,7 +17,7 @@ Output: Models of different complexity generated (degree 1, 2, 5)
 Explanation: Different polynomial degrees represent different model
 complexities.
 
-------------------------------------------------------------------------
+
 
 Visualization:
 
@@ -30,7 +30,7 @@ Output: Graph showing underfitting, good fit, and overfitting
 Explanation: Degree 1 underfits, degree 2 fits well, degree 5 overfits
 noise.
 
-------------------------------------------------------------------------
+
 
 2.  Training Error vs Model Complexity
 
@@ -45,8 +45,6 @@ print(errors)
 Output: Error values decreasing with complexity
 
 Explanation: Training error decreases as model complexity increases.
-
-------------------------------------------------------------------------
 
 3.  Explanation
 

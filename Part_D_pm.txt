@@ -5,7 +5,7 @@ PART D — AI-AUGMENTED TASK
 “Explain regression vs classification and bias-variance tradeoff with
 Python examples and visualizations.”
 
-------------------------------------------------------------------------
+
 
 2.  AI Response (Documented Output)
 
@@ -24,7 +24,7 @@ Output: Scatter plot with best-fit line
 
 Explanation: The line represents predicted continuous values.
 
-------------------------------------------------------------------------
+
 
 Classification: Classification predicts discrete categories such as 0 or
 1.
@@ -37,7 +37,7 @@ Output: Two distinct classes (0 and 1)
 
 Explanation: Data is divided into categories using a threshold.
 
-------------------------------------------------------------------------
+
 
 Bias–Variance Tradeoff:
 
@@ -52,7 +52,7 @@ Output: Visualization showing underfitting and overfitting
 
 Explanation: Degree 1 model underfits, degree 5 model overfits the data.
 
-------------------------------------------------------------------------
+
 
 3.  Evaluation
 

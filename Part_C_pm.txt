@@ -14,7 +14,7 @@ Examples: - Spam vs Not Spam - Disease detection - Fraud detection
 Explanation: Regression is used when the output is continuous, while
 classification is used when the output is categorical.
 
-------------------------------------------------------------------------
+
 
 Q2 — Coding: calculate_mse(y_true, y_pred)
 
@@ -32,7 +32,7 @@ Output: 4.666666666666667
 Explanation: MSE calculates the average squared difference between
 actual and predicted values.
 
-------------------------------------------------------------------------
+
 
 Q3 — Bias–Variance Tradeoff
 
